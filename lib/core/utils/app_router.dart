@@ -18,6 +18,8 @@ import '../../Features/home/presentation/manager/get_profile_cubit/get_profile_c
 import '../../Features/home/presentation/view/SelectScreen.dart';
 import '../../Features/home/presentation/view/brand_view.dart';
 import '../../Features/home/presentation/view/home_view.dart';
+import '../../Features/payment/persentation/view/add_card_screen.dart';
+import '../../Features/payment/persentation/view/widget/add_card_screen_body.dart';
 import '../../Features/register/presentation/view/get_started_view.dart';
 import '../../Features/register/presentation/view/sign_in_view.dart';
 import '../../Features/register/presentation/view/sign_up_view.dart';
@@ -38,6 +40,7 @@ class RouterPath {
   static const String selectScreen = '/selectScreen';
   static const String paymentView = '/paymentView';
   static const String orderConfirmedView = '/orderConfirmedView';
+  static const String addCardScreen = '/addCardScreen';
 }
 
 final GoRouter router = GoRouter(
@@ -129,5 +132,9 @@ final GoRouter router = GoRouter(
         path: RouterPath.orderConfirmedView,
         builder: (BuildContext context, GoRouterState state) =>
             const OrderConfirmedView()),
+    GoRoute(
+        path: RouterPath.addCardScreen,
+        builder: (BuildContext context, GoRouterState state) =>
+            const AddCardScreen()),
   ],
 );

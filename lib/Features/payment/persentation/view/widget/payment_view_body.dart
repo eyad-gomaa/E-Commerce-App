@@ -6,6 +6,7 @@ import 'package:e_commerce1/core/resources/style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widgets/custom_toast.dart';
 import 'cards_list_view.dart';
 
@@ -34,8 +35,8 @@ class _PaymentViewBodyState extends State<PaymentViewBody> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const CardsListView(),
-              const Center(
-                child: SemiTransparentButton(),
+               Center(
+                child: SemiTransparentButton(onTap: (){GoRouter.of(context).push(RouterPath.addCardScreen);}),
               ),
               Form(
                 key: _formKey,

@@ -5,4 +5,7 @@ class AssetManager{
   static const String googleImage = 'assets/images/google.png';
   static const String twitterImage = 'assets/images/twitter.png';
   static const String orderConfirmedImage = 'assets/images/order_confirmed.png';
+  static const String bankImage = 'assets/images/bank.png';
+  static const String paybalImage = 'assets/images/paybal.png';
+  static const String masterCardImage = 'assets/images/master-card.png';
 }

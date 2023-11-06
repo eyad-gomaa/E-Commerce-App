@@ -6,15 +6,13 @@ import '../../../../../core/resources/style.dart';
 
 class SemiTransparentButton extends StatelessWidget {
   const SemiTransparentButton({
-    super.key,
+    super.key, required this.onTap,
   });
-
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
-
-      },
+      onTap: onTap,
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 20),
         child: Container(
