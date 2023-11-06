@@ -16,13 +16,14 @@ class AddCardScreenBody extends StatefulWidget {
 
 class _AddCardScreenBodyState extends State<AddCardScreenBody> {
   final _formKey = GlobalKey<FormState>();
-  String? name;
-  String? cardNumber;
-  String? exp;
-  String? cvv;
+  String? _name;
+  String? _cardNumber;
+  String? _exp;
+  String? _cvv;
+  final List <String> _paymentMethodImage = [AssetManager.paybalImage,AssetManager.bankImage,AssetManager.masterCardImage];
+  int _selectedValue = 0;
   @override
   Widget build(BuildContext context) {
-    List <String> paymentMethodImage= [AssetManager.paybalImage,AssetManager.bankImage,AssetManager.masterCardImage];
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -30,21 +31,35 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
           padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children:[
-              SizedBox(
-                height: 50,
-                width: MediaQuery.sizeOf(context).width,
-                child: ListView.builder(
-                  itemCount: paymentMethodImage.length,
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, index) => Padding(
-                    padding: const EdgeInsets.only(right: 5.0),
-                    child: Container(
-                      width: (MediaQuery.sizeOf(context).width - 60) / 3,
-                      height: 50,
-                      decoration: BoxDecoration(
-                        color: ColorManager.darkWhite,
-                        image: DecorationImage(image: AssetImage(paymentMethodImage[index])),
-                          borderRadius: BorderRadius.circular(10)
+              Padding(
+                padding: const EdgeInsets.only(top: 20),
+                child: SizedBox(
+                  height: 50,
+                  width: MediaQuery.sizeOf(context).width,
+                  child: ListView.builder(
+                    itemCount: _paymentMethodImage.length,
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.only(right: 5.0),
+                      child: GestureDetector(
+                        onTap: (){
+                          setState(() {
+                            _selectedValue = index;
+                          });
+                        },
+                        child: Container(
+                          width: (MediaQuery.sizeOf(context).width - 60) / 3,
+                          height: 50,
+                          decoration: BoxDecoration(
+                            border: Border.all(
+                              color: _selectedValue == index? ColorManager.orange :ColorManager.darkWhite,
+                              width: 2,
+                            ),
+                            color:_selectedValue == index? ColorManager.lightOrange :ColorManager.darkWhite,
+                            image: DecorationImage(image: AssetImage(_paymentMethodImage[index])),
+                              borderRadius: BorderRadius.circular(10),
+                          ),
+                        ),
                       ),
                     ),
                   ),
@@ -68,7 +83,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                         ),
                         TextFormField(
                           onChanged: (value) {
-                            name = value;
+                            _name = value;
 
                           },
                           validator: (value) {
@@ -102,7 +117,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                         ),
                         TextFormField(
                           onChanged: (value){
-                            cardNumber = value;
+                            _cardNumber = value;
                           },
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -144,7 +159,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                               ),
                               TextFormField(
                                 onChanged: (value) {
-                                  exp = value;
+                                  _exp = value;
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {
@@ -181,7 +196,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                               ),
                               TextFormField(
                                 onChanged: (value) {
-                                  cvv = value;
+                                  _cvv = value;
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {

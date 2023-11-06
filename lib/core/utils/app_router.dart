@@ -19,7 +19,6 @@ import '../../Features/home/presentation/view/SelectScreen.dart';
 import '../../Features/home/presentation/view/brand_view.dart';
 import '../../Features/home/presentation/view/home_view.dart';
 import '../../Features/payment/persentation/view/add_card_screen.dart';
-import '../../Features/payment/persentation/view/widget/add_card_screen_body.dart';
 import '../../Features/register/presentation/view/get_started_view.dart';
 import '../../Features/register/presentation/view/sign_in_view.dart';
 import '../../Features/register/presentation/view/sign_up_view.dart';

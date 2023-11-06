@@ -19,7 +19,7 @@ class SemiTransparentButton extends StatelessWidget {
           width: 335,
           height: 50,
           decoration: BoxDecoration(
-              color: const Color(0xffF5F2FF),
+              color:ColorManager.lightPrimary,
               borderRadius: BorderRadius.circular(10),
               border: Border.all(color: ColorManager.primary, width: 2)),
           child: Row(
