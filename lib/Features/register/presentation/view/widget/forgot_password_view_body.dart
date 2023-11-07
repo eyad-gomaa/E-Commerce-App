@@ -1,8 +1,6 @@
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
 import 'package:e_commerce1/core/resources/asset_manager.dart';
-import 'package:e_commerce1/core/resources/color_manager.dart';
 import 'package:e_commerce1/core/resources/style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ForgotPasswordViewBody extends StatelessWidget {

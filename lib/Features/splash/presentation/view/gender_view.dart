@@ -18,13 +18,20 @@ class GenderView extends StatelessWidget {
         child: Padding(
           padding:  const EdgeInsets.all(PaddingSize.s10),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Padding(
-                padding: const EdgeInsets.only(bottom: 100),
-                child: SizedBox(
-                  width: MediaQuery.sizeOf(context).width / 2,
-                    child: Image.asset("assets/images/ecommerce_checkout.png")),
+              Expanded(
+                child: Column(
+                  mainAxisAlignment:MainAxisAlignment.center,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 100),
+                      child: SizedBox(
+                        width: MediaQuery.sizeOf(context).width / 2,
+                          child: Image.asset("assets/images/ecommerce_checkout.png")),
+                    ),
+                  ],
+                ),
               ),
               Container(
                 width: MediaQuery.sizeOf(context).width,
