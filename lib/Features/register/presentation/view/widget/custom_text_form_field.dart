@@ -9,13 +9,16 @@ class CustomTextFormField extends StatelessWidget {
       {Key? key,
       required this.label,
       required this.validator,
+        this.keyboardType,
 })
       : super(key: key);
   final String label;
+  final TextInputType? keyboardType;
   final String? Function(String?) validator;
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: keyboardType ?? TextInputType.text,
       cursorHeight: 0,
       cursorWidth: 0,
       validator: validator,
@@ -60,6 +63,7 @@ class _CustomPasswordTextFormFieldState
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      keyboardType: TextInputType.visiblePassword,
       obscureText: obscureText,
       cursorHeight: 0,
       cursorWidth: 0,

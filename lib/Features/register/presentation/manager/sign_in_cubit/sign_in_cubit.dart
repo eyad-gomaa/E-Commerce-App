@@ -1,10 +1,6 @@
 import 'package:e_commerce1/Features/register/data/repos/sign_in_repo/sign_in_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import '../../../data/models/login_data.dart';
 import '../../../data/models/login_model.dart';
-
-
 part 'sign_in_state.dart';
 
 class SignInCubit extends Cubit<SignInState> {

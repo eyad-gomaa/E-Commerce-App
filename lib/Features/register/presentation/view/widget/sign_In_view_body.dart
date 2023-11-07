@@ -1,3 +1,4 @@
+import 'package:e_commerce1/Features/home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import 'package:e_commerce1/Features/register/presentation/manager/sign_in_cubit/sign_in_cubit.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_app_bar.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
@@ -10,7 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../../../../core/resources/app_size.dart';
 import '../../../../../core/resources/style.dart';
 import '../../../../../core/utils/app_router.dart';
-import '../../../../../core/widgets/snack_bar.dart';
+import '../../../../../core/widgets/custom_toast.dart';
 
 class SignInViewBody extends StatefulWidget {
   const SignInViewBody({Key? key}) : super(key: key);
@@ -28,18 +29,18 @@ class _SignInViewBodyState extends State<SignInViewBody> {
     return BlocListener<SignInCubit, SignInState>(
       listener: (context, state) {
         if(state is SignInFailure){
-
-          showSnackBar(context: context, text: state.errMessage);
-
+          showToast(message: state.errMessage,color: ColorManager.redColor);
         }else if(state is SignInSuccess){
 
          if(state.userLoginModel.status == true){
-
-           saveLoginToken(switchValue,state.userLoginModel.data.token!);
+           saveLoginToken(switchValue,state.userLoginModel.data!.token!);
+           showToast(message: state.userLoginModel.message!,color: Colors.green);
            GoRouter.of(context).push(RouterPath.selectScreen);
          }else{
-           showSnackBar(context: context, text: (state.userLoginModel.message));
+           showToast(message: state.userLoginModel.message!,color: ColorManager.redColor);
          }
+        }else{
+          const CustomProgressIndicator();
         }
       },
       child: SafeArea(
@@ -67,6 +68,7 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                       child: Column(
                         children: [
                           CustomTextFormField(
+                            keyboardType: TextInputType.emailAddress,
                               label: "email",
                               validator: (value) {
                                 if (value == null || value.isEmpty) {

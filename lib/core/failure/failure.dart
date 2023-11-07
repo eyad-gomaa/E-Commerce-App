@@ -8,37 +8,37 @@ abstract class Failure {
 class ServerFailure extends Failure {
   ServerFailure(super.errMessage);
 
-  factory ServerFailure.fromDioError(DioError dioError){
+  factory ServerFailure.fromDioError(DioException dioError){
      switch(dioError.type){
-       case DioErrorType.connectionTimeout :
+       case DioExceptionType.connectionTimeout :
        return ServerFailure("Connection Timeout with Api Server");
 
-       case DioErrorType.sendTimeout :
+       case DioExceptionType.sendTimeout :
 
          return ServerFailure("send Timeout with Api Server");
-       case DioErrorType.receiveTimeout :
+       case DioExceptionType.receiveTimeout :
 
          return ServerFailure("receive Timeout with Api Server");
-       case DioErrorType.badResponse :
+       case DioExceptionType.badResponse :
 
          return ServerFailure.fromResponse(dioError.response!.statusCode!,dioError.response!.data);
 
-       case DioErrorType.badCertificate:
+       case DioExceptionType.badCertificate:
          return ServerFailure("incorrect certificate");
 
-       case DioErrorType.cancel :
+       case DioExceptionType.cancel :
 
          return ServerFailure("cancel request with Api Server");
 
-       case DioErrorType.connectionError :
+       case DioExceptionType.connectionError :
 
          return ServerFailure("connection Error");
 
-       case DioErrorType.unknown :
-         if (dioError.message!.contains('SocketException')) {
-           return ServerFailure("No Internet Connection");
-         }
-         return ServerFailure("Opps There was an error ");
+       case DioExceptionType.unknown :
+         // if (dioError.message!.contains('SocketException')) {
+         //   return ServerFailure("No Internet Connection");
+         // }
+         return ServerFailure("No Internet Connection or there is an error \n please try again");
          default:
            return ServerFailure("Opps There was an error ");
 

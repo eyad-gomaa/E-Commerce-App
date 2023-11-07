@@ -13,12 +13,12 @@ class SignInRepoImpl implements SignInRepo{
       await DioHelper.postData(data: {
         "email": emailAddress,
         "password" : password,
-      }, endpoint: 'login').then((value){
-        userLoginModel = LoginModel.fromJson(value.data);
+      }, endpoint: 'login').then((response){
+          userLoginModel = LoginModel.fromJson(response.data);
       });
       return right(userLoginModel!);
     }on Exception catch (e) {
-      if (e is DioError){
+      if (e is DioException){
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
