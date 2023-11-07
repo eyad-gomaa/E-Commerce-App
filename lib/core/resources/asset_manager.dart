@@ -8,4 +8,5 @@ class AssetManager{
   static const String bankImage = 'assets/images/bank.png';
   static const String paybalImage = 'assets/images/paybal.png';
   static const String masterCardImage = 'assets/images/master-card.png';
+  static const String forgotPasswordImage = 'assets/images/forgot_password.png';
 }

@@ -19,6 +19,7 @@ import '../../Features/home/presentation/view/SelectScreen.dart';
 import '../../Features/home/presentation/view/brand_view.dart';
 import '../../Features/home/presentation/view/home_view.dart';
 import '../../Features/payment/persentation/view/add_card_screen.dart';
+import '../../Features/register/presentation/view/forgot_password_view.dart';
 import '../../Features/register/presentation/view/get_started_view.dart';
 import '../../Features/register/presentation/view/sign_in_view.dart';
 import '../../Features/register/presentation/view/sign_up_view.dart';
@@ -40,6 +41,7 @@ class RouterPath {
   static const String paymentView = '/paymentView';
   static const String orderConfirmedView = '/orderConfirmedView';
   static const String addCardScreen = '/addCardScreen';
+  static const String forgotPasswordView = '/forgotPasswordView';
 }
 
 final GoRouter router = GoRouter(
@@ -135,5 +137,9 @@ final GoRouter router = GoRouter(
         path: RouterPath.addCardScreen,
         builder: (BuildContext context, GoRouterState state) =>
             const AddCardScreen()),
+    GoRoute(
+        path: RouterPath.forgotPasswordView,
+        builder: (BuildContext context, GoRouterState state) =>
+            const ForgotPasswordView()),
   ],
 );

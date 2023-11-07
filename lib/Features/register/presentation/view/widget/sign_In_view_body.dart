@@ -96,7 +96,9 @@ class _SignInViewBodyState extends State<SignInViewBody> {
                             mainAxisAlignment: MainAxisAlignment.end,
                             children: [
                               TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    GoRouter.of(context).push(RouterPath.forgotPasswordView);
+                                  },
                                   child: Text(
                                     "Forgot password?",
                                     style: StyleManager.title1
