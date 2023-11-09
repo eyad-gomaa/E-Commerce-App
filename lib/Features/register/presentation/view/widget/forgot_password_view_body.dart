@@ -1,4 +1,5 @@
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
+import 'package:e_commerce1/Features/register/presentation/view/widget/custom_text_form_field.dart';
 import 'package:e_commerce1/core/resources/asset_manager.dart';
 import 'package:e_commerce1/core/resources/style.dart';
 import 'package:flutter/material.dart';
@@ -28,13 +29,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
                 SizedBox(
                   height: 80,
                 ),
-                TextFormField(
-                  decoration: InputDecoration(
-                    label: Text("Email Address"),
-
-                  ),
-
-                ),
+                CustomTextFormField(label: "Email Address", validator: (vale){})
               ],
             ),
           ),
