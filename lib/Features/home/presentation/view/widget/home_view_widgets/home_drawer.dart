@@ -39,7 +39,7 @@ class HomeDrawer extends StatelessWidget {
                       ]
                   ),
                   //********** Profile Card **********
-                   ProfileCard(),
+                   const ProfileCard(),
                   //********** options **********
                   Column(
                     children: [
@@ -85,7 +85,7 @@ class LogOutItem extends StatelessWidget {
         prefs.remove("token");
         GoRouter.of(context).push(RouterPath.splashView);
         },
-      child: Container(
+      child: SizedBox(
         height: 50,
         child: Row(
           children: [
@@ -184,12 +184,12 @@ class ProfileCard extends StatelessWidget {
         );
       }
       else{
-        return Text("");
+        return const Text("");
       }
     }else if(state is GetProfileFailure){
       return Text(state.errMessage);
     }else{
-      return CustomProgressIndicator();
+      return const CustomProgressIndicator();
     }
   },
 );

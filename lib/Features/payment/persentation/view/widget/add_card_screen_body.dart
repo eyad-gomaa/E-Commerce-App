@@ -65,7 +65,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                   ),
                 ),
               ),
-              SizedBox(height: 30,),
+              const SizedBox(height: 30,),
               Form(
                 key: _formKey,
                 child: Column(

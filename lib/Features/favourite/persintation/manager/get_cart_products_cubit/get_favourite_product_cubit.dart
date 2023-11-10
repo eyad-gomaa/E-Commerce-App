@@ -1,6 +1,4 @@
-import 'package:e_commerce1/Features/favourite/data/model/edit_favourite_products.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/utils/api_service.dart';
 import '../../../data/model/favourite_model.dart';
 import '../../../data/repos/favourite_repo.dart';
 part 'get_favourite_product_state.dart';

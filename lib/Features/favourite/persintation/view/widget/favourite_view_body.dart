@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/resources/color_manager.dart';
 import '../../../../../core/resources/style.dart';
 import '../../../../home/presentation/manager/get_product_cubit/get_product_cubit.dart';
-import '../../../data/model/favourite_model.dart';
 import 'Favourite_card.dart';
 
 class FavouriteViewBody extends StatefulWidget {

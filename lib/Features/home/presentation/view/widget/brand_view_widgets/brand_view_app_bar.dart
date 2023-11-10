@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
-
 import '../../../../../../core/resources/app_size.dart';
 import '../../../../../../core/resources/color_manager.dart';
-import '../../../../data/model/BrandModel.dart';
 import '../../../../data/model/category_model/datum.dart';
 
 class BrandViewAppBar extends StatelessWidget {

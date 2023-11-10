@@ -4,7 +4,6 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import '../../../../../core/resources/app_size.dart';
 import '../../../../../core/resources/color_manager.dart';
-import '../../../../../core/widgets/custom_network_image.dart';
 
 class CartDetailsCard extends StatelessWidget {
   const CartDetailsCard({Key? key, required this.img, required this.title, required this.subTitle}) : super(key: key);
@@ -77,7 +76,7 @@ final String subTitle;
                 width: 1.0,
               ),
             ),
-            child: Icon(FontAwesomeIcons.check,size: 15,color: Colors.green,),
+            child: const Icon(FontAwesomeIcons.check,size: 15,color: Colors.green,),
           ),
         ],
       ),

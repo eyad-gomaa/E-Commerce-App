@@ -47,7 +47,7 @@ class CartData {
   }
 
   Map<String, dynamic> toJson() => {
-    "cart_items": cartItems.map((x) => x?.toJson()).toList(),
+    "cart_items": cartItems.map((x) => x.toJson()).toList(),
     "sub_total": subTotal,
     "total": total,
   };

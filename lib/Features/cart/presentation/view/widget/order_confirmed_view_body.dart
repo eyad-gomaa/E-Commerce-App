@@ -23,13 +23,13 @@ class OrderConfirmedViewBody extends StatelessWidget {
               Container(
                 width: MediaQuery.sizeOf(context).width/5,
                 height: MediaQuery.sizeOf(context).height/4,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   image: DecorationImage(image: AssetImage(AssetManager.orderConfirmedImage),fit: BoxFit.fill)
                 ),
               ),
-              SizedBox(height: 26,),
+              const SizedBox(height: 26,),
               Text("Order Confirmed!",style: StyleManager.headLine1,),
-              SizedBox(height: 10,),
+              const SizedBox(height: 10,),
               Text("Your order has been confirmed, we will send \n you confirmation email shortly.",style: StyleManager.subtitle,textAlign: TextAlign.center),
             ],
           ),

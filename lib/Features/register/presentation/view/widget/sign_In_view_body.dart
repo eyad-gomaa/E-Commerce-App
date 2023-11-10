@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:e_commerce1/Features/home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import 'package:e_commerce1/Features/register/presentation/manager/sign_in_cubit/sign_in_cubit.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_app_bar.dart';

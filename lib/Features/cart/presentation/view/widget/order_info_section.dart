@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/resources/style.dart';
 import '../../../../home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import '../../manager/cart_cubit.dart';
-import 'cart_view_body.dart';
 
 class OrderInfoSection extends StatelessWidget {
   const OrderInfoSection({Key? key}) : super(key: key);

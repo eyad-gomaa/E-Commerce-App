@@ -1,3 +1,5 @@
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../core/resources/app_size.dart';
@@ -5,8 +7,6 @@ import '../../../../../core/resources/color_manager.dart';
 import '../../../../../core/resources/style.dart';
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/widgets/custom_network_image.dart';
-import '../../../../home/data/model/product_model/product_data_model.dart';
-import '../../../../home/data/model/product_model/product_model.dart';
 import '../../../data/model/favourite_model.dart';
 
 class FavouriteCard extends StatelessWidget {

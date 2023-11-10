@@ -17,7 +17,7 @@ class GetBrandProductsCubit extends Cubit<GetBrandProductsState> {
             emit(GetBrandProductsFailure(errMessage: l.errMessage));
           },
               (r){
-            print( r.data!.data);
+
             emit(GetBrandProductsSuccess(productList: r.data!.data));
           }
       );

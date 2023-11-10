@@ -14,7 +14,7 @@ final String description;
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text("Description",style: StyleManager.headLine3,),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Text(
             description,
             style: StyleManager.subtitle,

@@ -1,7 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:flutter/foundation.dart';
 import '../../../../core/failure/failure.dart';
 import '../../../../core/utils/api_service.dart';
 import '../../../home/data/model/product_model/product_model.dart';
@@ -18,7 +16,7 @@ class FavouriteRepoImpl implements FavouriteRepo {
       });
       return right(favouriteModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
@@ -34,7 +32,7 @@ class FavouriteRepoImpl implements FavouriteRepo {
       });
       return right(productModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));

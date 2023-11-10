@@ -19,7 +19,7 @@ class CartRepoImpl implements CartRepo{
       });
       return right(cartModel!);
     } on Exception catch (e) {
-      if(e is DioError){
+      if(e is DioException){
         return left(ServerFailure.fromDioError(e));
       }else {
         return left(ServerFailure(e.toString()));
@@ -38,7 +38,7 @@ class CartRepoImpl implements CartRepo{
       });
       return right(addToCartModel!);
     } on Exception catch (e) {
-      if(e is DioError){
+      if(e is DioException){
         return left(ServerFailure.fromDioError(e));
       }else {
         return left(ServerFailure(e.toString()));

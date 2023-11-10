@@ -18,7 +18,7 @@ class DetailsProductTitle extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 "product",
               ),
               Text(

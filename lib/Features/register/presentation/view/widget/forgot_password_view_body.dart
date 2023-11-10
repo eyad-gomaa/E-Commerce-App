@@ -17,16 +17,16 @@ class ForgotPasswordViewBody extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                SizedBox(height: 20,),
+                const SizedBox(height: 20,),
                 Text(
                   "Forgot Password",
                   style: StyleManager.headLine1,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 68,
                 ),
                 Image.asset(AssetManager.forgotPasswordImage),
-                SizedBox(
+                const SizedBox(
                   height: 80,
                 ),
                 CustomTextFormField(label: "Email Address", validator: (vale){})
@@ -37,7 +37,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
         Column(
           children: [
             Text("Please write your email to receive a \n confirmation code to set a new password.",style: StyleManager.subtitle,textAlign: TextAlign.center,),
-            SizedBox(height: 51),
+            const SizedBox(height: 51),
             CustomBottomButton(onPressed: (){}, text: "Confirm Mail")
           ],
         )

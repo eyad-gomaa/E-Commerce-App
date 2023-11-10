@@ -1,4 +1,3 @@
-import 'package:e_commerce1/Features/home/data/model/BrandModel.dart';
 import 'package:e_commerce1/core/resources/app_size.dart';
 import 'package:flutter/material.dart';
 

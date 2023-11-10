@@ -1,5 +1,4 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:e_commerce1/Features/home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import 'package:e_commerce1/Features/home/presentation/view/widget/home_view_widgets/products_grid_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -52,7 +51,7 @@ class NewArrivalSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Container(
                         width: 160,
                         height: 10,
@@ -61,7 +60,7 @@ class NewArrivalSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      SizedBox(height: 10,),
+                      const SizedBox(height: 10,),
                       Container(
                         width: 100,
                         height: 10,

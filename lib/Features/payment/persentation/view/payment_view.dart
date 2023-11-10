@@ -12,12 +12,12 @@ class PaymentView extends StatelessWidget {
     return  Scaffold(
       appBar: AppBar(
         title: Text("payment",style: StyleManager.title1.copyWith(color: Colors.black),),
-        leading:IconButton(icon: Icon(Icons.arrow_back_outlined), onPressed: (){GoRouter.of(context).pop();}),
+        leading:IconButton(icon: const Icon(Icons.arrow_back_outlined), onPressed: (){GoRouter.of(context).pop();}),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: SafeArea(
+      body: const SafeArea(
           child: PaymentViewBody()
       ),
     );

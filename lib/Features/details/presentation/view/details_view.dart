@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import '../../../home/data/model/product_model/product_data_model.dart';
-import '../../../home/data/model/product_model/product_model.dart';
 import 'widget/details_view_body.dart';
 
 class DetailsView extends StatelessWidget {

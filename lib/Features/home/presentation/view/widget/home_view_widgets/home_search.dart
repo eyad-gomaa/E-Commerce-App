@@ -1,5 +1,3 @@
-import 'package:e_commerce1/Features/home/data/repos/home_repo.dart';
-import 'package:e_commerce1/Features/home/data/repos/home_repo_impl.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -19,7 +17,7 @@ class HomeSearch extends StatelessWidget {
             child: TextField(
               cursorColor: ColorManager.primary,
               decoration: InputDecoration(
-                  prefixIcon: Icon(FontAwesomeIcons.magnifyingGlass),
+                  prefixIcon: const Icon(FontAwesomeIcons.magnifyingGlass),
                   prefixIconColor: ColorManager.lightGrey,
                   hintText: "Search...",
                   hintStyle: StyleManager.subtitle,
@@ -30,17 +28,17 @@ class HomeSearch extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 10,),
+        const SizedBox(width: 10,),
         ElevatedButton(
             style: ElevatedButton.styleFrom(
                 backgroundColor: ColorManager.primary,
-                minimumSize:Size(50, 50),
+                minimumSize:const Size(50, 50),
                 elevation: 0,
                 shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10))
             ),
             onPressed: (){
             },
-            child: Icon(FontAwesomeIcons.microphone)
+            child: const Icon(FontAwesomeIcons.microphone)
         ),
       ],
     );

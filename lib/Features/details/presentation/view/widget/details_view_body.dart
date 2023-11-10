@@ -1,19 +1,13 @@
 import 'package:e_commerce1/Features/cart/presentation/manager/cart_cubit.dart';
 import 'package:e_commerce1/Features/details/presentation/view/widget/details_app_bar.dart';
 import 'package:e_commerce1/Features/details/presentation/view/widget/details_product_title.dart';
-import 'package:e_commerce1/Features/details/presentation/view/widget/review_section.dart';
-import 'package:e_commerce1/Features/details/presentation/view/widget/size_list_view.dart';
 import 'package:e_commerce1/Features/details/presentation/view/widget/total_price_section.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
 import 'package:e_commerce1/core/resources/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/resources/app_size.dart';
-import '../../../../../core/utils/service_locator.dart';
-import '../../../../cart/data/repo/cart_repo.dart';
 import '../../../../home/data/model/product_model/product_data_model.dart';
-import '../../../../home/data/model/product_model/product_model.dart';
-import 'description_section.dart';
 import 'details_photos_list_view.dart';
 
 class DetailsViewBody extends StatelessWidget {

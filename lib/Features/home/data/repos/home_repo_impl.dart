@@ -20,7 +20,7 @@ class HomeRepoImpl implements HomeRepo {
       });
       return right(productModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
@@ -37,7 +37,7 @@ class HomeRepoImpl implements HomeRepo {
       });
       return right(categoryModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
@@ -53,9 +53,9 @@ class HomeRepoImpl implements HomeRepo {
           .collection("products")
           .where("brand", isEqualTo: brand)
           .get();
-      for (var element in response.docs) {
-        // productList.add(ProductModel.fromJson());
-      }
+      // for (var element in response.docs) {
+      //   // productList.add(ProductModel.fromJson());
+      // }
       return productList;
     } on FirebaseException catch (e) {
       if (kDebugMode) {
@@ -72,12 +72,12 @@ class HomeRepoImpl implements HomeRepo {
     List<ProductModel> productList = [];
     try {
       productList.clear();
-      final response = await FirebaseFirestore.instance
+       await FirebaseFirestore.instance
           .collection("products")
           .where("id", whereIn: ["0rCW59b888hIwjQPq80w"]).get();
-      for (var element in response.docs) {
-        // productList.add(ProductModel.fromJson(element));
-      }
+      // for (var element in response.docs) {
+      //   // productList.add(ProductModel.fromJson(element));
+      // }
       return productList;
     } on FirebaseException catch (e) {
       if (kDebugMode) {
@@ -98,13 +98,14 @@ class HomeRepoImpl implements HomeRepo {
       });
       return right(profileModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
     }
   }
 
+  @override
   Future<Either<Failure, FavouriteModel>> getFavouriteProducts() async {
     FavouriteModel? favouriteModel;
     try {
@@ -113,7 +114,7 @@ class HomeRepoImpl implements HomeRepo {
       });
       return right(favouriteModel!);
     } on Exception catch (e) {
-      if (e is DioError) {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));

@@ -3,9 +3,7 @@ import 'package:e_commerce1/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../data/model/category_model/datum.dart';
-import '../../data/repos/home_repo.dart';
 import '../manager/get_brand_products_cubit/get_brand_products_cubit.dart';
-import '../manager/get_product_cubit/get_product_cubit.dart';
 import 'widget/brand_view_widgets/brand_view_body.dart';
 
 class BrandView extends StatelessWidget {

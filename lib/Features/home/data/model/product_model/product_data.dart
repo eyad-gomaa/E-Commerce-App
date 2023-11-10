@@ -48,7 +48,7 @@ class ProductData {
 
 	Map<String, dynamic> toJson() => {
 		"current_page": currentPage,
-		"data": data.map((x) => x?.toJson()).toList(),
+		"data": data.map((x) => x.toJson()).toList(),
 		"first_page_url": firstPageUrl,
 		"from": from,
 		"last_page": lastPage,

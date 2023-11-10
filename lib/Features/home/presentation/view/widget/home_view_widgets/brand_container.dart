@@ -1,7 +1,5 @@
-import 'package:e_commerce1/Features/home/presentation/manager/get_product_cubit/get_product_cubit.dart';
 import 'package:e_commerce1/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../core/resources/app_size.dart';
 import '../../../../../../core/resources/color_manager.dart';

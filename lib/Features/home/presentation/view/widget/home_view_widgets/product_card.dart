@@ -1,10 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:e_commerce1/Features/favourite/data/repos/favourite_repo.dart';
-import 'package:e_commerce1/Features/favourite/data/repos/favourite_repo_impl.dart';
-import 'package:e_commerce1/Features/favourite/persintation/manager/get_cart_products_cubit/get_favourite_product_cubit.dart';
 import 'package:e_commerce1/Features/home/presentation/manager/get_product_cubit/get_product_cubit.dart';
 import 'package:e_commerce1/core/utils/app_router.dart';
-import 'package:e_commerce1/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -14,7 +9,6 @@ import '../../../../../../core/resources/shared.dart';
 import '../../../../../../core/resources/style.dart';
 import '../../../../../../core/widgets/custom_network_image.dart';
 import '../../../../data/model/product_model/product_data_model.dart';
-import '../../../../data/repos/home_repo.dart';
 
 
 class ProductCard extends StatelessWidget {
@@ -70,7 +64,7 @@ class ProductCard extends StatelessWidget {
               maxLines: 2,
             ),
           ),
-          SizedBox(height: 10,),
+          const SizedBox(height: 10,),
           Text(
             "${product.price}\$",
             style: StyleManager.headLine3,

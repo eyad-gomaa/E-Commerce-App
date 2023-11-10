@@ -14,7 +14,7 @@ class ForgotPasswordView extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
-      body: ForgotPasswordViewBody(),
+      body: const ForgotPasswordViewBody(),
     );
   }
 }

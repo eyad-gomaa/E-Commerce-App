@@ -5,7 +5,6 @@ import 'package:go_router/go_router.dart';
 import '../../../../../core/resources/app_size.dart';
 import '../../../../../core/resources/style.dart';
 import '../../../../../core/widgets/snack_bar.dart';
-import '../../../../../core/widgets/switch.dart';
 import 'custom_app_bar.dart';
 import 'custom_bottom_button.dart';
 import 'custom_text_form_field.dart';

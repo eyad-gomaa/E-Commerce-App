@@ -10,7 +10,7 @@ class CartView extends StatelessWidget {
     return  SafeArea(
       child: Scaffold(
         backgroundColor: ColorManager.white,
-          body: CartViewBody()
+          body: const CartViewBody()
       ),
     );
   }

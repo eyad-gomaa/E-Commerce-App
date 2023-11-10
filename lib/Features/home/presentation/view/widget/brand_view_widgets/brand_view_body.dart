@@ -1,4 +1,3 @@
-import 'package:e_commerce1/Features/home/data/model/BrandModel.dart';
 import 'package:e_commerce1/core/resources/app_size.dart';
 import 'package:e_commerce1/core/resources/style.dart';
 import 'package:flutter/material.dart';
@@ -28,7 +27,7 @@ class BrandViewBody extends StatelessWidget {
             BlocBuilder<GetBrandProductsCubit, GetBrandProductsState>(
               builder: (context, state) {
                 if (state is GetBrandProductsSuccess) {
-                  print(state.productList);
+
                   return Expanded(
                     child: Column(
                       children: [

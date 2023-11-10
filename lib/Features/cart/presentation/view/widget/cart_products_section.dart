@@ -1,11 +1,8 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shimmer/shimmer.dart';
 
-import '../../../../../core/resources/color_manager.dart';
-import '../../../../home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import '../../manager/cart_cubit.dart';
 import 'cart_card.dart';
 

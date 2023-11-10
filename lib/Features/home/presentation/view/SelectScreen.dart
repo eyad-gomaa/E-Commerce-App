@@ -1,3 +1,4 @@
+// ignore_for_file: file_names
 import 'package:e_commerce1/Features/home/presentation/manager/HomeCubit/home_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -35,7 +36,7 @@ class _SelectScreenState extends State<SelectScreen> {
         var homeCubit = BlocProvider.of<HomeCubit>(context);
         return Scaffold(
           bottomNavigationBar: GNav(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               iconSize: 25,
               color: ColorManager.black,
               activeColor: ColorManager.primary,
@@ -61,7 +62,7 @@ class _SelectScreenState extends State<SelectScreen> {
                   text: 'Cart',
                   onPressed: () {
                     BlocProvider.of<CartCubit>(context)
-                      ..getCartProducts();
+                      .getCartProducts();
                   },
                 ),
                 const GButton(
