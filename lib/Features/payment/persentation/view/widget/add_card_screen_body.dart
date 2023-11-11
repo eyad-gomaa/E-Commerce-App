@@ -16,10 +16,10 @@ class AddCardScreenBody extends StatefulWidget {
 
 class _AddCardScreenBodyState extends State<AddCardScreenBody> {
   final _formKey = GlobalKey<FormState>();
-  String? _name;
-  String? _cardNumber;
-  String? _exp;
-  String? _cvv;
+  String? name;
+  String? cardNumber;
+  String? exp;
+  String? cvv;
   final List <String> _paymentMethodImage = [AssetManager.paybalImage,AssetManager.bankImage,AssetManager.masterCardImage];
   int _selectedValue = 0;
   @override
@@ -83,7 +83,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                         ),
                         TextFormField(
                           onChanged: (value) {
-                            _name = value;
+                            name = value;
 
                           },
                           validator: (value) {
@@ -117,7 +117,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                         ),
                         TextFormField(
                           onChanged: (value){
-                            _cardNumber = value;
+                            cardNumber = value;
                           },
                           validator: (value) {
                             if (value!.isEmpty) {
@@ -159,7 +159,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                               ),
                               TextFormField(
                                 onChanged: (value) {
-                                  _exp = value;
+                                  exp = value;
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {
@@ -196,7 +196,7 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
                               ),
                               TextFormField(
                                 onChanged: (value) {
-                                  _cvv = value;
+                                  cvv = value;
                                 },
                                 validator: (value) {
                                   if (value!.isEmpty) {

@@ -29,192 +29,194 @@ class _PaymentViewBodyState extends State<PaymentViewBody> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const CardsListView(),
-               Center(
-                child: SemiTransparentButton(onTap: (){GoRouter.of(context).push(RouterPath.addCardScreen);}),
-              ),
-              Form(
-                key: _formKey,
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Card Owner",
-                          style: StyleManager.headLine3,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        TextFormField(
-                          onChanged: (value) {
-                            name = value;
-
-                          },
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Required field';
-                            }
-                            return null;
-                          },
-                          cursorColor: ColorManager.primary,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: ColorManager.darkWhite,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide.none)),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Card Number",
-                          style: StyleManager.headLine3,
-                        ),
-                        const SizedBox(
-                          height: 10,
-                        ),
-                        TextFormField(
-                          onChanged: (value){
-                            cardNumber = value;
-                          },
-                          validator: (value) {
-                            if (value!.isEmpty) {
-                              return 'Required field';
-                            }else if(value.length < 16){
-                              return 'Min length : 16';
-                            }
-                            return null;
-                          },
-                          maxLength: 16,
-                          keyboardType: TextInputType.number,
-                          cursorColor: ColorManager.primary,
-                          decoration: InputDecoration(
-                              filled: true,
-                              fillColor: ColorManager.darkWhite,
-                              border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                  borderSide: BorderSide.none)),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          width: MediaQuery.sizeOf(context).width / 2 - 25,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "EXP",
-                                style: StyleManager.headLine3,
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              TextFormField(
-                                onChanged: (value) {
-                                  exp = value;
-                                },
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Required field';
-                                  }
-                                  else if(value.length < 5){
-                                    return 'Min length : 5';
-                                  }
-                                  return null;
-                                },
-                                maxLength: 5,
-                                cursorColor: ColorManager.primary,
-                                decoration: InputDecoration(
-                                    filled: true,
-                                    fillColor: ColorManager.darkWhite,
-                                    border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none)),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: MediaQuery.sizeOf(context).width / 2 - 25,
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Text(
-                                "CVV",
-                                style: StyleManager.headLine3,
-                              ),
-                              const SizedBox(
-                                height: 10,
-                              ),
-                              TextFormField(
-                                onChanged: (value) {
-                                  cvv = value;
-                                },
-                                validator: (value) {
-                                  if (value!.isEmpty) {
-                                    return 'Required field';
-                                  }else if(value.length < 3){
-                                    return 'Min length : 3';
-                                  }
-                                  return null;
-                                },
-                                maxLength: 3,
-                                keyboardType: TextInputType.number,
-                                cursorColor: ColorManager.primary,
-                                decoration: InputDecoration(
-                                    filled: true,
-                                    fillColor: ColorManager.darkWhite,
-                                    border: OutlineInputBorder(
-                                        borderRadius: BorderRadius.circular(10),
-                                        borderSide: BorderSide.none)),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(
-                      height: 15,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Text(
-                          "Save card info",
-                          style: StyleManager.headLine3,
-                        ),
-                        Switch(
-                          value: true,
-                          onChanged: (value) {},
-                          activeTrackColor: ColorManager.primary,
-                          activeColor: Colors.white,
-                        )
-                      ],
-                    ),
-                  ],
+        SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const CardsListView(),
+                 Center(
+                  child: SemiTransparentButton(onTap: (){GoRouter.of(context).push(RouterPath.addCardScreen);}),
                 ),
-              )
-            ],
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Card Owner",
+                            style: StyleManager.headLine3,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextFormField(
+                            onChanged: (value) {
+                              name = value;
+
+                            },
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Required field';
+                              }
+                              return null;
+                            },
+                            cursorColor: ColorManager.primary,
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: ColorManager.darkWhite,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide.none)),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            "Card Number",
+                            style: StyleManager.headLine3,
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          TextFormField(
+                            onChanged: (value){
+                              cardNumber = value;
+                            },
+                            validator: (value) {
+                              if (value!.isEmpty) {
+                                return 'Required field';
+                              }else if(value.length < 16){
+                                return 'Min length : 16';
+                              }
+                              return null;
+                            },
+                            maxLength: 16,
+                            keyboardType: TextInputType.number,
+                            cursorColor: ColorManager.primary,
+                            decoration: InputDecoration(
+                                filled: true,
+                                fillColor: ColorManager.darkWhite,
+                                border: OutlineInputBorder(
+                                    borderRadius: BorderRadius.circular(10),
+                                    borderSide: BorderSide.none)),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          SizedBox(
+                            width: MediaQuery.sizeOf(context).width / 2 - 25,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "EXP",
+                                  style: StyleManager.headLine3,
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                TextFormField(
+                                  onChanged: (value) {
+                                    exp = value;
+                                  },
+                                  validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return 'Required field';
+                                    }
+                                    else if(value.length < 5){
+                                      return 'Min length : 5';
+                                    }
+                                    return null;
+                                  },
+                                  maxLength: 5,
+                                  cursorColor: ColorManager.primary,
+                                  decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: ColorManager.darkWhite,
+                                      border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: BorderSide.none)),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(
+                            width: MediaQuery.sizeOf(context).width / 2 - 25,
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "CVV",
+                                  style: StyleManager.headLine3,
+                                ),
+                                const SizedBox(
+                                  height: 10,
+                                ),
+                                TextFormField(
+                                  onChanged: (value) {
+                                    cvv = value;
+                                  },
+                                  validator: (value) {
+                                    if (value!.isEmpty) {
+                                      return 'Required field';
+                                    }else if(value.length < 3){
+                                      return 'Min length : 3';
+                                    }
+                                    return null;
+                                  },
+                                  maxLength: 3,
+                                  keyboardType: TextInputType.number,
+                                  cursorColor: ColorManager.primary,
+                                  decoration: InputDecoration(
+                                      filled: true,
+                                      fillColor: ColorManager.darkWhite,
+                                      border: OutlineInputBorder(
+                                          borderRadius: BorderRadius.circular(10),
+                                          borderSide: BorderSide.none)),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 15,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            "Save card info",
+                            style: StyleManager.headLine3,
+                          ),
+                          Switch(
+                            value: true,
+                            onChanged: (value) {},
+                            activeTrackColor: ColorManager.primary,
+                            activeColor: Colors.white,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         CustomBottomButton(onPressed: () {

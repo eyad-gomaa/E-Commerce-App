@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'Features/address/presentation/manager/address_cubit.dart';
 import 'Features/home/data/repos/home_repo.dart';
 import 'Features/home/presentation/manager/get_product_cubit/get_product_cubit.dart';
 import 'Features/payment/persentation/manager/payment_cubit/payment_cubit.dart';
@@ -31,6 +32,9 @@ class MyApp extends StatelessWidget {
         ),
         BlocProvider(
           create: (context) => PaymentCubit(),
+        ),
+        BlocProvider(
+          create: (context) => AddressCubit(),
         ),
       ],
       child: MaterialApp.router(

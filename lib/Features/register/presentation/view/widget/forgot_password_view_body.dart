@@ -29,7 +29,7 @@ class ForgotPasswordViewBody extends StatelessWidget {
                 const SizedBox(
                   height: 80,
                 ),
-                CustomTextFormField(label: "Email Address", validator: (vale){})
+                CustomTextFormField(label: "Email Address", validator: (vale){return null;})
               ],
             ),
           ),

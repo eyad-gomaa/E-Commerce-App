@@ -1,4 +1,4 @@
-#Thu Nov 09 19:32:38 EET 2023
+#Sat Nov 11 01:36:42 EET 2023
 base.2=D\:\\flutter\\e_commerce1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes3.dex
 path.2=classes3.dex
 base.1=D\:\\flutter\\e_commerce1\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes2.dex

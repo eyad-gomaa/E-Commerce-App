@@ -12,6 +12,7 @@ class CartCubit extends Cubit<CartState> {
   CartModel? cartModel;
   String? editCartMessage;
   double? subtotal;
+
   Future<void>getCartProducts()async{
     emit(CartLoadingState());
     var result = await repo.getCartData();
@@ -42,6 +43,8 @@ class CartCubit extends Cubit<CartState> {
         }
     );
   }
+
+
   // itemCountIncrement(int index){
   //   int? itemCount;
   //   itemCount  = cartModel!.data!.cartItems[index].quantity;

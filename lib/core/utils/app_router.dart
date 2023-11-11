@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import '../../Features/cart/data/repo/cart_repo.dart';
 import '../../Features/cart/presentation/manager/cart_cubit.dart';
+import '../../Features/address/presentation/view/address_view.dart';
 import '../../Features/cart/presentation/view/cart_view.dart';
 import '../../Features/cart/presentation/view/order_confirmed_view.dart';
 import '../../Features/details/presentation/view/details_view.dart';
@@ -42,6 +43,7 @@ class RouterPath {
   static const String orderConfirmedView = '/orderConfirmedView';
   static const String addCardScreen = '/addCardScreen';
   static const String forgotPasswordView = '/forgotPasswordView';
+  static const String addressView = '/addressView';
 }
 
 final GoRouter router = GoRouter(
@@ -141,5 +143,9 @@ final GoRouter router = GoRouter(
         path: RouterPath.forgotPasswordView,
         builder: (BuildContext context, GoRouterState state) =>
             const ForgotPasswordView()),
+    GoRoute(
+        path: RouterPath.addressView,
+        builder: (BuildContext context, GoRouterState state) =>
+            const AddressView()),
   ],
 );

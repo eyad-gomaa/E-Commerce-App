@@ -9,3 +9,4 @@ class CartFailureState extends CartState {}
 class ItemCountIncrement extends CartState {}
 class AddOrRemoveProductLoadingState extends CartState {}
 class AddOrRemoveProductSuccessState extends CartState {}
+class AddAddressSuccess extends CartState {}
