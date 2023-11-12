@@ -1,7 +1,7 @@
 import 'package:e_commerce1/Features/home/data/repos/home_repo.dart';
 import 'package:e_commerce1/core/utils/api_service.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../../../../core/resources/shared.dart';
+import '../../../../../core/shared/shared.dart';
 import '../../../../favourite/data/model/favourite_model.dart';
 import '../../../data/model/product_model/product_data_model.dart';
 part 'get_product_state.dart';

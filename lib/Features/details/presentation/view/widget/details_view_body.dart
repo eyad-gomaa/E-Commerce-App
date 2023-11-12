@@ -3,7 +3,7 @@ import 'package:e_commerce1/Features/details/presentation/view/widget/details_ap
 import 'package:e_commerce1/Features/details/presentation/view/widget/details_product_title.dart';
 import 'package:e_commerce1/Features/details/presentation/view/widget/total_price_section.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
-import 'package:e_commerce1/core/resources/shared.dart';
+import 'package:e_commerce1/core/shared/shared.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/resources/app_size.dart';

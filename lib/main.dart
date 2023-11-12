@@ -7,13 +7,19 @@ import 'package:hive_flutter/adapters.dart';
 import 'Features/address/presentation/manager/address_cubit.dart';
 import 'Features/home/data/repos/home_repo.dart';
 import 'Features/home/presentation/manager/get_product_cubit/get_product_cubit.dart';
+import 'Features/payment/data/model/card_model.dart';
+import 'Features/payment/data/repo/payment_repo.dart';
 import 'Features/payment/persentation/manager/payment_cubit/payment_cubit.dart';
+import 'core/shared/constants.dart';
 import 'core/utils/app_router.dart';
 import 'core/utils/service_locator.dart';
 import 'firebase_options.dart';
 
 void main() async {
   await Hive.initFlutter();
+  await Hive.openBox(kCardsBox);
+  Hive.registerAdapter(CardModelAdapter());
+
   setupServiceLocator();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
@@ -34,7 +40,7 @@ class MyApp extends StatelessWidget {
           create: (context) => GetProductCubit(getIt<HomeRepo>()),
         ),
         BlocProvider(
-          create: (context) => PaymentCubit(),
+          create: (context) => PaymentCubit(getIt<PaymentRepo>()),
         ),
         BlocProvider(
           create: (context) => AddressCubit(),

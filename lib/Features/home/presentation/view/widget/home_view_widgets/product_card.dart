@@ -5,7 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:go_router/go_router.dart';
 import '../../../../../../core/resources/color_manager.dart';
-import '../../../../../../core/resources/shared.dart';
+import '../../../../../../core/shared/shared.dart';
 import '../../../../../../core/resources/style.dart';
 import '../../../../../../core/widgets/custom_network_image.dart';
 import '../../../../data/model/product_model/product_data_model.dart';

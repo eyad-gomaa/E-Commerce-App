@@ -1,7 +1,7 @@
 import 'package:e_commerce1/Features/cart/data/repo/cart_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../core/resources/shared.dart';
+import '../../../../core/shared/shared.dart';
 import '../../data/model/cart_model.dart';
 
 part 'cart_state.dart';

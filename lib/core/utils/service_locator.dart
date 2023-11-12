@@ -8,6 +8,8 @@ import '../../Features/cart/data/repo/cart_repo_impl.dart';
 import '../../Features/home/data/repos/details_repo_impl.dart';
 import '../../Features/favourite/data/repos/favourite_repo.dart';
 import '../../Features/favourite/data/repos/favourite_repo_impl.dart';
+import '../../Features/payment/data/repo/payment_repo.dart';
+import '../../Features/payment/data/repo/payment_repo_impl.dart';
 import '../../Features/register/data/repos/google_signin_repo/google_signin_repo_impl.dart';
 import '../../Features/register/data/repos/sign_in_repo/sign_in_repo_impl.dart';
 
@@ -20,6 +22,7 @@ void setupServiceLocator(){
   getIt.registerSingleton<DetailsRepo>(DetailsRepoImpl());
   getIt.registerSingleton<FavouriteRepo>(FavouriteRepoImpl());
   getIt.registerSingleton<CartRepo>(CartRepoImpl());
+  getIt.registerSingleton<PaymentRepo>(PaymentRepoImpl());
 
 
 }

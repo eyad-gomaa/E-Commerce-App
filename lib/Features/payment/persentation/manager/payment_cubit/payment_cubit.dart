@@ -1,10 +1,14 @@
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../../data/model/card_model.dart';
+import '../../../data/repo/payment_repo.dart';
 
 part 'payment_state.dart';
 
 class PaymentCubit extends Cubit<PaymentState> {
-  PaymentCubit() : super(PaymentInitial());
+  PaymentCubit(this.repo)
+      : super(PaymentInitial());
+  final PaymentRepo repo;
   String? ownerName;
   String? cardNumber;
   String? exp;
@@ -16,5 +20,15 @@ class PaymentCubit extends Cubit<PaymentState> {
     this.exp = exp;
     this.cvv = cvv;
     emit(AddPaymentSuccess());
+  }
+
+  addCard(CardModel card){
+    try {
+      emit(AddCardLoading());
+      repo.addCard(card);
+    } on Exception catch (e) {
+      emit(AddCardFailure());
+    }
+
   }
 }
