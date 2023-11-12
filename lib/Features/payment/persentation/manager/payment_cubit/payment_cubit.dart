@@ -6,9 +6,9 @@ import '../../../data/repo/payment_repo.dart';
 part 'payment_state.dart';
 
 class PaymentCubit extends Cubit<PaymentState> {
-  PaymentCubit(this.repo)
+  PaymentCubit()
       : super(PaymentInitial());
-  final PaymentRepo repo;
+
   String? ownerName;
   String? cardNumber;
   String? exp;
@@ -22,13 +22,5 @@ class PaymentCubit extends Cubit<PaymentState> {
     emit(AddPaymentSuccess());
   }
 
-  addCard(CardModel card){
-    try {
-      emit(AddCardLoading());
-      repo.addCard(card);
-    } on Exception catch (e) {
-      emit(AddCardFailure());
-    }
 
-  }
 }

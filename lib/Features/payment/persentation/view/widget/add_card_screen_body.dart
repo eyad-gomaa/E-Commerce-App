@@ -1,6 +1,12 @@
+import 'package:e_commerce1/Features/payment/data/model/card_model.dart';
+import 'package:e_commerce1/Features/payment/data/repo/payment_repo.dart';
+import 'package:e_commerce1/Features/payment/persentation/manager/add_card_cubit/add_card_cubit.dart';
+import 'package:e_commerce1/Features/payment/persentation/manager/payment_cubit/payment_cubit.dart';
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bottom_button.dart';
 import 'package:e_commerce1/core/resources/color_manager.dart';
+import 'package:e_commerce1/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/resources/asset_manager.dart';
@@ -24,7 +30,9 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
   int _selectedValue = 0;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return BlocProvider(
+  create: (context) => AddCardCubit(getIt<PaymentRepo>()),
+  child: Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Padding(
@@ -247,12 +255,14 @@ class _AddCardScreenBodyState extends State<AddCardScreenBody> {
         ),
         CustomBottomButton(onPressed: (){
           if (_formKey.currentState!.validate()) {
+            BlocProvider.of<AddCardCubit>(context).addCard(CardModel(name: name!,cardNumber: cardNumber!,cvv: cvv!,exp: exp!));
             showToast(message: "Added Successfully",color: Colors.green);
             GoRouter.of(context).pop();
           }
         }, text: "text")
       ],
-    );
+    ),
+);
 
   }
 }

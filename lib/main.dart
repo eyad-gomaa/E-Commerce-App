@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           create: (context) => GetProductCubit(getIt<HomeRepo>()),
         ),
         BlocProvider(
-          create: (context) => PaymentCubit(getIt<PaymentRepo>()),
+          create: (context) => PaymentCubit(),
         ),
         BlocProvider(
           create: (context) => AddressCubit(),
