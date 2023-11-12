@@ -1,10 +1,10 @@
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'package:e_commerce1/Features/home/presentation/view/widget/home_view_widgets/custom_progress_indicator.dart';
 import 'package:e_commerce1/core/resources/app_size.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/resources/color_manager.dart';
 import '../../../../../core/resources/style.dart';
+import '../../../../cart/presentation/view/widget/cart_products_section.dart';
 import '../../../../home/presentation/manager/get_product_cubit/get_product_cubit.dart';
 import 'Favourite_card.dart';
 
@@ -65,6 +65,7 @@ class _FavouriteViewBodyState extends State<FavouriteViewBody> {
                         child: Padding(
                           padding: const EdgeInsets.only(top: PaddingSize.s10),
                           child: ListView.builder(
+                            physics: const BouncingScrollPhysics(),
                               itemCount: BlocProvider
                                   .of<GetProductCubit>(context)
                                   .favProductList!
@@ -114,7 +115,7 @@ class _FavouriteViewBodyState extends State<FavouriteViewBody> {
                     ],
                   );
                 },
-              fallback:(context) => const CustomProgressIndicator()
+              fallback:(context) => const CartProductsShimmer()
           );
         },
       ),

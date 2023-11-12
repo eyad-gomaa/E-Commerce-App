@@ -51,7 +51,7 @@ class NewArrivalSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      const SizedBox(height: 10,),
+                      SizedBox(height: 10,),
                       Container(
                         width: 160,
                         height: 10,
@@ -60,7 +60,7 @@ class NewArrivalSection extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      const SizedBox(height: 10,),
+                      SizedBox(height: 10,),
                       Container(
                         width: 100,
                         height: 10,
