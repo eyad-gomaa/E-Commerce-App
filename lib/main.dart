@@ -1,3 +1,4 @@
+import 'package:e_commerce1/bloc_observer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +20,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kCardsBox);
   Hive.registerAdapter(CardModelAdapter());
-
+Bloc.observer = SimpleBlocObserver();
   setupServiceLocator();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
