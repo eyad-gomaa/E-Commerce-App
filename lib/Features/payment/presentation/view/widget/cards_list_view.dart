@@ -69,11 +69,11 @@ class CardsListView extends StatelessWidget {
                                   style: const TextStyle(color: Colors.white),
                                 ),
                               ),
-                              const Padding(
-                                padding: EdgeInsets.only(top: 10, left: 20),
+                               Padding(
+                                padding: const EdgeInsets.only(top: 10, left: 20),
                                 child: Text(
-                                  "\$3,763.87",
-                                  style: TextStyle(color: Colors.white),
+                                  state.cardList[index].exp,
+                                  style: const TextStyle(color: Colors.white),
                                 ),
                               )
                             ],

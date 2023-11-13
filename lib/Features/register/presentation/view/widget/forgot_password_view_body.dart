@@ -2,7 +2,9 @@ import 'package:e_commerce1/Features/register/presentation/view/widget/custom_bo
 import 'package:e_commerce1/Features/register/presentation/view/widget/custom_text_form_field.dart';
 import 'package:e_commerce1/core/resources/asset_manager.dart';
 import 'package:e_commerce1/core/resources/style.dart';
+import 'package:e_commerce1/core/utils/app_router.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ForgotPasswordViewBody extends StatelessWidget {
   const ForgotPasswordViewBody({Key? key}) : super(key: key);
@@ -38,7 +40,9 @@ class ForgotPasswordViewBody extends StatelessWidget {
           children: [
             Text("Please write your email to receive a \n confirmation code to set a new password.",style: StyleManager.subtitle,textAlign: TextAlign.center,),
             const SizedBox(height: 51),
-            CustomBottomButton(onPressed: (){}, text: "Confirm Mail")
+            CustomBottomButton(onPressed: (){
+              GoRouter.of(context).push(RouterPath.verificationCodeView);
+            }, text: "Confirm Mail")
           ],
         )
       ],
