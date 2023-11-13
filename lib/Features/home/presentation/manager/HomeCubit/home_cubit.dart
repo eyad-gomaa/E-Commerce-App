@@ -2,7 +2,7 @@ import 'package:e_commerce1/Features/favourite/persintation/view/favourite_view.
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../cart/presentation/view/cart_view.dart';
-import '../../../../payment/persentation/view/payment_view.dart';
+import '../../../../payment/presentation/view/payment_view.dart';
 import '../../view/home_view.dart';
 import 'home_state.dart';
 

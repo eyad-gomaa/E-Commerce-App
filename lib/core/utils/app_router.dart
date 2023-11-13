@@ -1,6 +1,6 @@
 import 'package:e_commerce1/Features/home/data/repos/home_repo.dart';
 import 'package:e_commerce1/Features/home/presentation/manager/get_brand_cubit/get_brand_cubit.dart';
-import 'package:e_commerce1/Features/payment/persentation/view/payment_view.dart';
+import 'package:e_commerce1/Features/payment/presentation/view/payment_view.dart';
 import 'package:e_commerce1/core/utils/service_locator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -19,7 +19,7 @@ import '../../Features/home/presentation/manager/get_profile_cubit/get_profile_c
 import '../../Features/home/presentation/view/SelectScreen.dart';
 import '../../Features/home/presentation/view/brand_view.dart';
 import '../../Features/home/presentation/view/home_view.dart';
-import '../../Features/payment/persentation/view/add_card_screen.dart';
+import '../../Features/payment/presentation/view/add_card_screen.dart';
 import '../../Features/register/presentation/view/forgot_password_view.dart';
 import '../../Features/register/presentation/view/get_started_view.dart';
 import '../../Features/register/presentation/view/sign_in_view.dart';

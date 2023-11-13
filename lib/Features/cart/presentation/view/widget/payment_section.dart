@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/resources/style.dart';
-import '../../../../payment/persentation/manager/payment_cubit/payment_cubit.dart';
+import '../../../../payment/presentation/manager/payment_cubit/payment_cubit.dart';
 import 'cart_details.dart';
 
 class PaymentSection extends StatelessWidget {
