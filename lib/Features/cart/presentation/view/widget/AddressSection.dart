@@ -26,11 +26,15 @@ class AddressSection extends StatelessWidget {
               "Delivery Address",
               style: StyleManager.headLine3,
             ),
-             CartDetailsCard(
+             BlocBuilder<AddressCubit, AddressState>(
+  builder: (context, state) {
+    return CartDetailsCard(
               title: BlocProvider.of<AddressCubit>(context).name ?? "No Current Address",
               img: "assets/images/map.png",
               subTitle: BlocProvider.of<AddressCubit>(context).country ?? "Tap to add data",
-            )
+            );
+  },
+)
           ],
         ),
       ),

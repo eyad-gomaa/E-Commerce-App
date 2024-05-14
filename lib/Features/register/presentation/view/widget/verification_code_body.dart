@@ -16,135 +16,137 @@ class VerificationCodeBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                const SizedBox(height: 20,),
-                Text(
-                  "Verification Code",
-                  style: StyleManager.headLine1,
-                ),
-                const SizedBox(
-                  height: 68,
-                ),
-                Image.asset(AssetManager.forgotPasswordImage),
-                const SizedBox(
-                  height: 80,
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      width: 77,
-                        height: 98,
-                        child: TextFormField(
-                          onChanged: (value){
-                            if(value.length ==1){
-                              FocusScope.of(context).nextFocus();
-                            }
-                          },
-                          cursorColor: ColorManager.primary,
-                          keyboardType: TextInputType.number,
-                          style: StyleManager.headLine1,
-                          textAlign: TextAlign.center,
-                          inputFormatters: [
-                            LengthLimitingTextInputFormatter(1),
-                            FilteringTextInputFormatter.digitsOnly
-                          ],
-
-                          decoration: InputDecoration(
-                            enabled: true,
-                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                 borderSide: BorderSide(color: ColorManager.lightGrey)),
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.primary)),
-                          ),
-                        )),
-                    SizedBox(width: 20,),
-                    SizedBox(
-                      width: 77,
-                        height: 98,
-                        child: TextFormField(
-                          onChanged: (value){
-                            if(value.length ==1){
-                              FocusScope.of(context).nextFocus();
-                            }
-                          },
-                          cursorColor: ColorManager.primary,
-                          keyboardType: TextInputType.number,
-                          style: StyleManager.headLine1,
-                          textAlign: TextAlign.center,
-                          inputFormatters: [
-                            LengthLimitingTextInputFormatter(1),
-                            FilteringTextInputFormatter.digitsOnly
-                          ],
-
-                          decoration: InputDecoration(
-                            enabled: true,
-                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                 borderSide: BorderSide(color: ColorManager.lightGrey)),
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.primary)),
-                          ),
-                        )),
-                    SizedBox(width: 20,),
-                    SizedBox(
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  const SizedBox(height: 20,),
+                  Text(
+                    "Verification Code",
+                    style: StyleManager.headLine1,
+                  ),
+                  const SizedBox(
+                    height: 68,
+                  ),
+                  Image.asset(AssetManager.forgotPasswordImage),
+                  const SizedBox(
+                    height: 80,
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
                         width: 77,
-                        height: 98,
-                        child: TextFormField(
-                          onChanged: (value){
-                            if(value.length ==1){
-                              FocusScope.of(context).nextFocus();
-                            }
-                          },
-                          cursorColor: ColorManager.primary,
-                          keyboardType: TextInputType.number,
-                          style: StyleManager.headLine1,
-                          textAlign: TextAlign.center,
-                          inputFormatters: [
-                            LengthLimitingTextInputFormatter(1),
-                            FilteringTextInputFormatter.digitsOnly
-                          ],
+                          height: 98,
+                          child: TextFormField(
+                            onChanged: (value){
+                              if(value.length ==1){
+                                FocusScope.of(context).nextFocus();
+                              }
+                            },
+                            cursorColor: ColorManager.primary,
+                            keyboardType: TextInputType.number,
+                            style: StyleManager.headLine1,
+                            textAlign: TextAlign.center,
+                            inputFormatters: [
+                              LengthLimitingTextInputFormatter(1),
+                              FilteringTextInputFormatter.digitsOnly
+                            ],
 
-                          decoration: InputDecoration(
-                            enabled: true,
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.lightGrey)),
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.primary)),
-                          ),
-                        )),
-                    SizedBox(width: 20,),
-                    SizedBox(
+                            decoration: InputDecoration(
+                              enabled: true,
+                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                   borderSide: BorderSide(color: ColorManager.lightGrey)),
+                              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.primary)),
+                            ),
+                          )),
+                      SizedBox(width: 20,),
+                      SizedBox(
                         width: 77,
-                        height: 98,
-                        child: TextFormField(
-                          onChanged: (value){
-                            if(value.length ==1){
-                              FocusScope.of(context).nextFocus();
-                            }
-                          },
-                          cursorColor: ColorManager.primary,
-                          keyboardType: TextInputType.number,
-                          style: StyleManager.headLine1,
-                          textAlign: TextAlign.center,
-                          inputFormatters: [
-                            LengthLimitingTextInputFormatter(1),
-                            FilteringTextInputFormatter.digitsOnly
-                          ],
+                          height: 98,
+                          child: TextFormField(
+                            onChanged: (value){
+                              if(value.length ==1){
+                                FocusScope.of(context).nextFocus();
+                              }
+                            },
+                            cursorColor: ColorManager.primary,
+                            keyboardType: TextInputType.number,
+                            style: StyleManager.headLine1,
+                            textAlign: TextAlign.center,
+                            inputFormatters: [
+                              LengthLimitingTextInputFormatter(1),
+                              FilteringTextInputFormatter.digitsOnly
+                            ],
 
-                          decoration: InputDecoration(
-                            enabled: true,
-                            border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.lightGrey)),
-                            focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
-                                borderSide: BorderSide(color: ColorManager.primary)),
-                          ),
-                        )),
-                  ],
-                )
-              ],
+                            decoration: InputDecoration(
+                              enabled: true,
+                               border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                   borderSide: BorderSide(color: ColorManager.lightGrey)),
+                              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.primary)),
+                            ),
+                          )),
+                      SizedBox(width: 20,),
+                      SizedBox(
+                          width: 77,
+                          height: 98,
+                          child: TextFormField(
+                            onChanged: (value){
+                              if(value.length ==1){
+                                FocusScope.of(context).nextFocus();
+                              }
+                            },
+                            cursorColor: ColorManager.primary,
+                            keyboardType: TextInputType.number,
+                            style: StyleManager.headLine1,
+                            textAlign: TextAlign.center,
+                            inputFormatters: [
+                              LengthLimitingTextInputFormatter(1),
+                              FilteringTextInputFormatter.digitsOnly
+                            ],
+
+                            decoration: InputDecoration(
+                              enabled: true,
+                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.lightGrey)),
+                              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.primary)),
+                            ),
+                          )),
+                      SizedBox(width: 20,),
+                      SizedBox(
+                          width: 77,
+                          height: 98,
+                          child: TextFormField(
+                            onChanged: (value){
+                              if(value.length ==1){
+                                FocusScope.of(context).nextFocus();
+                              }
+                            },
+                            cursorColor: ColorManager.primary,
+                            keyboardType: TextInputType.number,
+                            style: StyleManager.headLine1,
+                            textAlign: TextAlign.center,
+                            inputFormatters: [
+                              LengthLimitingTextInputFormatter(1),
+                              FilteringTextInputFormatter.digitsOnly
+                            ],
+
+                            decoration: InputDecoration(
+                              enabled: true,
+                              border: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.lightGrey)),
+                              focusedBorder: OutlineInputBorder(borderRadius: BorderRadius.circular(10),
+                                  borderSide: BorderSide(color: ColorManager.primary)),
+                            ),
+                          )),
+                    ],
+                  )
+                ],
+              ),
             ),
           ),
         ),

@@ -72,7 +72,7 @@ class HomeRepoImpl implements HomeRepo {
     List<ProductModel> productList = [];
     try {
       productList.clear();
-       await FirebaseFirestore.instance
+      await FirebaseFirestore.instance
           .collection("products")
           .where("id", whereIn: ["0rCW59b888hIwjQPq80w"]).get();
       // for (var element in response.docs) {

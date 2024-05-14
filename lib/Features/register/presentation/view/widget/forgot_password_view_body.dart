@@ -15,24 +15,26 @@ class ForgotPasswordViewBody extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Expanded(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Column(
-              children: [
-                const SizedBox(height: 20,),
-                Text(
-                  "Forgot Password",
-                  style: StyleManager.headLine1,
-                ),
-                const SizedBox(
-                  height: 68,
-                ),
-                Image.asset(AssetManager.forgotPasswordImage),
-                const SizedBox(
-                  height: 80,
-                ),
-                CustomTextFormField(label: "Email Address", validator: (vale){return null;})
-              ],
+          child: SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                children: [
+                  const SizedBox(height: 20,),
+                  Text(
+                    "Forgot Password",
+                    style: StyleManager.headLine1,
+                  ),
+                  const SizedBox(
+                    height: 68,
+                  ),
+                  Image.asset(AssetManager.forgotPasswordImage),
+                  const SizedBox(
+                    height: 80,
+                  ),
+                  CustomTextFormField(label: "Email Address", validator: (vale){return null;})
+                ],
+              ),
             ),
           ),
         ),
